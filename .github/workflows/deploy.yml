@@ -22,7 +22,7 @@ jobs:
       - name: Validate HTML
         run: npx html-validate "*.html"
 
-      # Деплой на GitHub Pages
+      # Депл   ой на GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
