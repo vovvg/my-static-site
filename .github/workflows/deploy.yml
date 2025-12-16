@@ -21,11 +21,15 @@ jobs:
           node-version: '18'
           cache: 'npm'
 
-      # Опциональная проверка HTML
       - name: Install dependencies
-        run: npm install html-validate
+        run: |
+          npm install
+          # Или если используете pnpm: pnpm install
+          # Или если используете yarn: yarn install
+
+      # Опциональная проверка HTML
       - name: Validate HTML
-        run: npx html-validate "src/**/*.html
+        run: npx html-validate "src/**/*.html"
 
       # Деплой на GitHub Pages
       - name: Deploy to GitHub Pages
