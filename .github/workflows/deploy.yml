@@ -15,6 +15,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+
       # Опциональная проверка HTML
       - name: Install dependencies
         run: npm install html-validate
@@ -28,6 +29,8 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
           force_orphan: true
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
 
       # Уведомление об успешном деплое
       - name: Success notification
