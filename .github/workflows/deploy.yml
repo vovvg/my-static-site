@@ -22,11 +22,10 @@ jobs:
           cache: 'npm'
 
       # Опциональная проверка HTML
-      - name: HTML Validation
-        uses: cyrilletuzi/validate-html@v4
-        with:
-          pattern: "**/*.html"
-          level: warning
+      - name: Install dependencies
+        run: npm install html-validate
+      - name: Validate HTML
+        run: npx html-validate "src/**/*.html
 
       # Деплой на GitHub Pages
       - name: Deploy to GitHub Pages
